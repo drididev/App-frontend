@@ -1,5 +1,5 @@
 #stage 1
-FROM node:18-alpine 
+FROM node
 
 WORKDIR /app
 Copy package.json .
