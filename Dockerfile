@@ -2,11 +2,9 @@
 FROM node
 
 WORKDIR /app
-Copy package.json .
-Copy yarn.lock .
+
+copy ./app/ .
 
 RUN yarn install
-
-copy . .
 
 CMD ["yarn", "start"]
