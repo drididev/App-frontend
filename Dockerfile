@@ -1,10 +1,12 @@
 #stage 1
-FROM node
+FROM node:20-alpine
 
-WORKDIR /app
+ENV APP=/app
 
-copy ./app/ .
+WORKDIR ${APP}
 
 RUN yarn install
+
+COPY ${APP}/. ${APP}
 
 CMD ["yarn", "start"]
